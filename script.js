@@ -54,9 +54,14 @@ let neighborhood = {
 
 let neighbName = neighborhood.first.concat(neighborhood.mid).concat(neighborhood.end);
 
-let secondName = neighbStart[Math.abs(Math.floor((Math.random() * neighbMid.length) -1))].concat(neighbMid[Math.abs(Math.floor((Math.random() * neighbMid.length) -1))]).concat(neighbEnd[Math.abs(Math.floor((Math.random() * neighbEnd.length) -1))]);
+let secondName = secondRandom(neighbStart).concat(secondRandom(neighbMid)).concat(secondRandom(neighbEnd));
+
+let paraOne = `${neighborhood.paraStart} ${neighbName} is situated ${neighborhood.loc} ${secondName}. Filled with ${neighborhood.build} and ${neighborhood.secondBuild}, this ${neighborhood.descr} neighborhood is sometimes refered to as New York City's ${neighborhood.secDesc}.` 
+
+let paraTwo = `Located just a ${neighborhood.dist} away from ${neighborhood.transp}, traveling from home to ${neighborhood.firstPlace} to ${neighborhood.secondPlace} and back should be a breeze! Of course with ${neighborhood.attra} and ${neighborhood.secAttra} you may never want to leave!`
 
 
-let para = `${neighborhood.paraStart} ${neighbName} is located ${neighborhood.loc} ${secondName}. Filled with ${neighborhood.build} and ${neighborhood.secondBuild}, this ${neighborhood.descr} neighborhood is sometimes refered to as New York City's ${neighborhood.secDesc}. Located just a ${neighborhood.dist} away from ${neighborhood.transp}, traveling from home to ${neighborhood.firstPlace} to ${neighborhood.secondPlace} and back should be a breeze! Of course with ${neighborhood.attra} and ${neighborhood.secAttra} you may never want to leave!`
+document.getElementById('neighborhoodName').innerHTML = neighbName;
+document.getElementById('neighborhoodDescOne').innerHTML = paraOne;
+document.getElementById('neighborhoodDescTwo').innerHTML = paraTwo;
 
-console.log(para);
