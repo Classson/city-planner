@@ -8,7 +8,7 @@ function secondRandom (arr) {
 
 const neighbStart = ['Tri', 'So', 'Mid', 'Upper ', 'Lower ', 'Hell\'s ', 'Little ', 'Far ', 'Kips', 'Greene ', 'Forte ', 'No', 'Morning', 'Old '];
 
-const neighbMid = ['rose', 'Clinton',  'Throgs', 'borough', 'Battery', 'Roosevelt', 'side', 'Bush', 'Williams'];
+const neighbMid = ['rose', 'Clinton',  'Throgs', 'borough', 'Battery', 'Roosevelt', 'side', 'Williams'];
 
 const neighbEnd = [' City', 'burg', ' Village', ' District', 'wick', ' Heights', ' Hills', ' Slope', ' Ridge', ' Point', 'wood', ' Park', 'view', 'dale', 'lawn', 'hurst', 'ington'];
 
@@ -18,7 +18,7 @@ const place = ['deep within the heart of', 'on the outskirts of'];
 
 const description = ['bustling', 'quaint', 'picturesque'];
 
-const secondDesc = ['shinning star', 'hidden gem', 'best kept secret', 'smallest wonder', 'choicest locale'];
+const secondDesc = ['shinning star', 'hidden gem', 'best kept secret', 'smallest wonder', 'choicest locale', 'greatest treasure'];
 
 const buildings = ['beautiful brownstones', 'spacious lofts', 'trendy repurposed warehouse spaces', 'luxury condos', 'multi-family homes', 'lively co-ops',];
 
