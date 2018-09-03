@@ -6,9 +6,18 @@ function secondRandom (arr) {
     return arr[Math.abs(Math.floor((Math.random() * arr.length) -1))];
 }
 
-const neighbStart = ['Tri', 'So', 'Mid', 'Upper ', 'Lower ', 'Hell\'s ', 'Little ', 'Far ', 'Kips', 'Greene ', 'Forte ', 'No', 'Morning', 'Old '];
+function nameBuilder(start, mid, end){
+    if(start[start.length-1] === ' ' || start === 'Tri' || start === 'So' || start === 'No'){
+        firstLet = mid.substring(0,1).toUpperCase();
+        headless = mid.substring(1);
+        mid = firstLet.concat(headless);
+    }
+    return start.concat(mid).concat(end);
+}
 
-const neighbMid = ['rose', 'Clinton',  'Throgs', 'borough', 'Battery', 'Roosevelt', 'side', 'Williams'];
+const neighbStart = ['Tri', 'So', 'Mid', 'Upper ', 'Lower ', 'Hell\'s ', 'Little ', 'Far ', 'Kips ', 'Greene ', 'Forte ', 'No', 'Morning', 'Old '];
+
+const neighbMid = ['rose', 'clinton',  'throgs', 'borough', 'battery', 'Roosevelt', 'side', 'Williams'];
 
 const neighbEnd = [' City', 'burg', ' Village', ' District', 'wick', ' Heights', ' Hills', ' Slope', ' Ridge', ' Point', 'wood', ' Park', 'view', 'dale', 'lawn', 'hurst', 'ington'];
 
@@ -30,9 +39,23 @@ const placeOne = ['work', 'school', 'various appointments', 'community service',
       
 const placeTwo = ['nightlife', 'nightclasses', 'concerts', 'Broadway shows', 'Off-Broadway shows', 'Off-Off-Broadway shows', 'community theater', 'pet-sitting for friends', 'sporting events'];
 
-const attractions = ['cinematic skyline views', '8 different size differentiated dog parks', '3 competing arthouse cinemas', '12 differenct coffeeshops, each with a cold brew so strong, you\'ll swear it\'s laced with something illegal', ];
+const attractions = ['cinematic skyline views', '8 different size differentiated dog parks', '3 competing arthouse cinemas', '12 differenct coffeeshops, each with a cold brew that will freeze you down to the bones', ];
 
 const secAttractions = ['an organic cold pressed juicery on every block', 'a waterfront cat cafe', 'weekly flea markets', '2 food halls', 'countless swank boutiques'];
+
+const magazine = ['Gothamist', 'The Village Voice', 'WNYC', 'a guy on Craistlist'];
+
+const backImgs = ["url('https://images.unsplash.com/photo-1521823343548-614cbfc0f742?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2a51377883cc6f6da3ba39658883e50e&auto=format&fit=crop&w=1534&q=80')",
+"url('https://images.unsplash.com/photo-1521592238221-712c99319100?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=170b5c01e0e86d00a298238acd4c94da&auto=format&fit=crop&w=1350&q=80')",
+"url('https://images.unsplash.com/photo-1523128662036-c964212cc9f0?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ca9959adba137fe6801d623d61e5242c&auto=format&fit=crop&w=1526&q=80')","url('https://images.unsplash.com/photo-1521591722639-18a2f391ac1e?ixlib=rb-0.3.5&s=a047e05fead6d935aa206df61aea8976&auto=format&fit=crop&w=1534&q=80')",
+"url('https://images.unsplash.com/photo-1520011597487-ebdd1ea20ab0?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=777d146092084e34fc059e78068f2292&auto=format&fit=crop&w=1334&q=80')",
+"url('https://images.unsplash.com/photo-1518563172008-e56c5dfbaef6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e0d10acce892e31a6dbf53ac31578633&auto=format&fit=crop&w=1534&q=80')",
+"url('https://images.unsplash.com/photo-1516563973696-145e6e4cd90c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7744e84ab9027f995a430b77b7c9b7f3&auto=format&fit=crop&w=1534&q=80')",
+"url('https://images.unsplash.com/photo-1515112569565-1e4aef316db9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=af407e287fe66173e9fffb43104aec77&auto=format&fit=crop&w=1350&q=80')",
+"url('https://images.unsplash.com/photo-1504747773730-3071efbbeb98?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=76e04e21909751eee23bed7b138e8aa9&auto=format&fit=crop&w=1330&q=80')",
+"url('https://images.unsplash.com/photo-1463438081263-6852d273b5f2?ixlib=rb-0.3.5&s=c9a47313be7ca8979d397c61e6355240&auto=format&fit=crop&w=1350&q=80')",
+"url('https://images.unsplash.com/photo-1498618382752-02689e335b14?ixlib=rb-0.3.5&s=78f8f835385592fd16713485dce50780&auto=format&fit=crop&w=1489&q=80')"]
+
 
 let neighborhood = {
     first: randomize(neighbStart),
@@ -49,14 +72,16 @@ let neighborhood = {
     attra: randomize(attractions),
     secAttra: randomize(secAttractions),
     firstPlace: randomize(placeOne),
-    secondPlace: randomize(placeTwo)
+    secondPlace: randomize(placeTwo),
+    mag: randomize(magazine),
+    backImg: randomize(backImgs)
 }
 
-let neighbName = neighborhood.first.concat(neighborhood.mid).concat(neighborhood.end);
+let neighbName = nameBuilder(neighborhood.first, neighborhood.mid, neighborhood.end);
 
-let secondName = secondRandom(neighbStart).concat(secondRandom(neighbMid)).concat(secondRandom(neighbEnd));
+let secondName = nameBuilder(secondRandom(neighbStart), (secondRandom(neighbMid)), (secondRandom(neighbEnd)));
 
-let paraOne = `${neighborhood.paraStart} ${neighbName} is situated ${neighborhood.loc} ${secondName}. Filled with ${neighborhood.build} and ${neighborhood.secondBuild}, this ${neighborhood.descr} neighborhood is sometimes refered to as New York City's ${neighborhood.secDesc}.` 
+let paraOne = `${neighborhood.paraStart} ${neighbName} is situated ${neighborhood.loc} ${secondName}. Filled with ${neighborhood.build} and ${neighborhood.secondBuild}, this ${neighborhood.descr} neighborhood was once refered to by ${neighborhood.mag} as New York City's ${neighborhood.secDesc}.` 
 
 let paraTwo = `Located just a ${neighborhood.dist} away from ${neighborhood.transp}, traveling from home to ${neighborhood.firstPlace} to ${neighborhood.secondPlace} and back should be a breeze! Of course with ${neighborhood.attra} and ${neighborhood.secAttra} you may never want to leave!`
 
@@ -64,4 +89,6 @@ let paraTwo = `Located just a ${neighborhood.dist} away from ${neighborhood.tran
 document.getElementById('neighborhoodName').innerHTML = neighbName;
 document.getElementById('neighborhoodDescOne').innerHTML = paraOne;
 document.getElementById('neighborhoodDescTwo').innerHTML = paraTwo;
+document.body.style.backgroundImage = neighborhood.backImg;
+
 

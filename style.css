@@ -1,12 +1,8 @@
 
-html {
-    background-image: url("https://images.unsplash.com/photo-1521823343548-614cbfc0f742?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2a51377883cc6f6da3ba39658883e50e&auto=format&fit=crop&w=1534&q=80");
+body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-body {
     font-family: sans-serif;
     padding: 0px;
     margin: 0px;
@@ -26,9 +22,12 @@ body {
     padding: 25px;
     max-width: 700px;
     min-height: 350px;
+    max-height: 500px;
+    border-radius: 35px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    overflow: scroll;
 }
 
 h1 {
