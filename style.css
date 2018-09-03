@@ -28,8 +28,23 @@ body {
     flex-direction: column;
     justify-content: center;
     overflow: scroll;
+    border: solid 1px;
 }
 
 h1 {
     text-align: center;
+}
+
+#buttons {
+    align-self: center;
+}
+
+#button {
+    padding: 10px;
+    margin: 15px;
+    background-color: rgba(51, 153, 255, 0.0);
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 10px;
+    border: solid 1px;
 }

@@ -39,11 +39,11 @@ const placeOne = ['work', 'school', 'various appointments', 'community service',
       
 const placeTwo = ['nightlife', 'nightclasses', 'concerts', 'Broadway shows', 'Off-Broadway shows', 'Off-Off-Broadway shows', 'community theater', 'pet-sitting for friends', 'sporting events'];
 
-const attractions = ['cinematic skyline views', '8 different size differentiated dog parks', '3 competing arthouse cinemas', '12 differenct coffeeshops, each with a cold brew that will freeze you down to the bones', ];
+const attractions = ['cinematic skyline views', '8 different size differentiated dog parks', '3 competing arthouse cinemas', '12 differenct coffeeshops', ];
 
 const secAttractions = ['an organic cold pressed juicery on every block', 'a waterfront cat cafe', 'weekly flea markets', '2 food halls', 'countless swank boutiques'];
 
-const magazine = ['Gothamist', 'The Village Voice', 'WNYC', 'a guy on Craistlist'];
+const magazine = ['Gothamist', 'The Village Voice', 'WNYC', 'a guy on Yelp', 'Pat Kiernan', 'Jad Abumrad', 'Time Out NY', 'Fran Lebowitz', 'Anna Wintour'];
 
 const backImgs = ["url('https://images.unsplash.com/photo-1521823343548-614cbfc0f742?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2a51377883cc6f6da3ba39658883e50e&auto=format&fit=crop&w=1534&q=80')",
 "url('https://images.unsplash.com/photo-1521592238221-712c99319100?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=170b5c01e0e86d00a298238acd4c94da&auto=format&fit=crop&w=1350&q=80')",
