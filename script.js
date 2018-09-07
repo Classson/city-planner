@@ -39,7 +39,7 @@ const placeOne = ['work', 'school', 'various appointments', 'community service',
       
 const placeTwo = ['nightlife', 'nightclasses', 'concerts', 'Broadway shows', 'Off-Broadway shows', 'Off-Off-Broadway shows', 'community theater', 'pet-sitting for friends', 'sporting events'];
 
-const attractions = ['cinematic skyline views', '8 different size differentiated dog parks', '3 competing arthouse cinemas', '12 different coffeeshops', ];
+const attractions = ['cinematic skyline views', '8 different size differentiated dog parks', '3 competing arthouse cinemas', '12 different coffeeshops', 'free neighborhood-wide wifi'];
 
 const secAttractions = ['an organic cold pressed juicery on every block', 'a waterfront cat cafe', 'weekly flea markets', '2 food halls', 'countless swank boutiques'];
 
@@ -87,7 +87,17 @@ let neighbName = nameBuilder(neighborhood.first, neighborhood.mid, neighborhood.
 
 let secondName = nameBuilder(secondRandom(neighbStart), (secondRandom(neighbMid)), (secondRandom(neighbEnd)));
 
-let paraOne = `${neighborhood.paraStart} ${neighbName} is situated ${neighborhood.loc} ${secondName}. Filled with ${neighborhood.build} and ${neighborhood.secondBuild}, this ${neighborhood.descr} neighborhood was once refered to by ${neighborhood.mag} as New York City's ${neighborhood.secDesc}.` 
+function secondBuildFunc(buildType) {
+    let secBuildType = buildings[Math.abs(Math.floor((Math.random() * buildings.length) -2))];;
+    if(buildType === secBuildType){
+        secBuildType = secondBuildFunc(buildType);
+    }
+    return secBuildType;
+}
+
+let secBuildingType = secondBuildFunc(neighborhood.build);
+
+let paraOne = `${neighborhood.paraStart} ${neighbName} is situated ${neighborhood.loc} ${secondName}. Filled with ${neighborhood.build} and ${secBuildingType}, this ${neighborhood.descr} neighborhood was once refered to by ${neighborhood.mag} as New York City's ${neighborhood.secDesc}.` 
 
 let paraTwo = `Located just a ${neighborhood.dist} away from ${neighborhood.transp}, traveling from home to ${neighborhood.firstPlace} to ${neighborhood.secondPlace} and back should be a breeze! Of course with ${neighborhood.attra} and ${neighborhood.secAttra} you may never want to leave!`
 
