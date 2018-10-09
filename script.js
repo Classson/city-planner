@@ -27,7 +27,7 @@ const place = ['deep within the heart of', 'on the outskirts of'];
 
 const description = ['bustling', 'quaint', 'picturesque'];
 
-const secondDesc = ['shinning star', 'hidden gem', 'best kept secret', 'smallest wonder', 'choicest locale', 'greatest treasure'];
+const secondDesc = ['shining star', 'hidden gem', 'best kept secret', 'smallest wonder', 'choicest locale', 'greatest treasure'];
 
 const buildings = ['beautiful brownstones', 'spacious lofts', 'trendy repurposed warehouse spaces', 'luxury condos', 'multi-family homes', 'lively co-ops',];
 
@@ -97,7 +97,7 @@ function secondBuildFunc(buildType) {
 
 let secBuildingType = secondBuildFunc(neighborhood.build);
 
-let paraOne = `${neighborhood.paraStart} ${neighbName} is situated ${neighborhood.loc} ${secondName}. Filled with ${neighborhood.build} and ${secBuildingType}, this ${neighborhood.descr} neighborhood was once refered to by ${neighborhood.mag} as New York City's ${neighborhood.secDesc}.` 
+let paraOne = `${neighborhood.paraStart} ${neighbName} is situated ${neighborhood.loc} ${secondName}. Filled with ${neighborhood.build} and ${secBuildingType}, this ${neighborhood.descr} neighborhood was once referred to by ${neighborhood.mag} as New York City's ${neighborhood.secDesc}.` 
 
 let paraTwo = `Located just a ${neighborhood.dist} away from ${neighborhood.transp}, traveling from home to ${neighborhood.firstPlace} to ${neighborhood.secondPlace} and back should be a breeze! Of course with ${neighborhood.attra} and ${neighborhood.secAttra} you may never want to leave!`
 
