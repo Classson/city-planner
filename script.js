@@ -88,9 +88,9 @@ let neighbName = nameBuilder(neighborhood.first, neighborhood.mid, neighborhood.
 let secondName = nameBuilder(secondRandom(neighbStart), (secondRandom(neighbMid)), (secondRandom(neighbEnd)));
 
 function secondBuildFunc(buildType) {
-    let secBuildType = buildings[Math.abs(Math.floor((Math.random() * buildings.length) -2))];;
+    let secBuildType = buildings[Math.abs(Math.floor((Math.random() * buildings.length) -2))];
     if(buildType === secBuildType){
-        secBuildType = secondBuildFunc(buildType);
+        secBuildType = buildings[Math.abs(Math.floor((Math.random() * buildings.length) -3))];
     }
     return secBuildType;
 }
